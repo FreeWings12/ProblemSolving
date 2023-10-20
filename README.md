@@ -1,2 +1,3 @@
 # ProblemSolving
-Data Structure with Javascript
+=> JS Concepts with problems
+=> Problem solving with Javascript
