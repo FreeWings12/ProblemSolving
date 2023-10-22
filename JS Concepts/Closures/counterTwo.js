@@ -67,10 +67,7 @@ function createCounter(init) {
     return {
         increment: () => ++initialValue,
         decrement: () => --initialValue,
-        reset: () => {
-            initialValue = init;
-            return init;
-        },
+        reset: () => initialValue = init,
     };
 }
 
