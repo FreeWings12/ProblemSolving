@@ -34,6 +34,7 @@ Explanation: 5 !== null so this expression returns true.
 
 /**
  * Explanation:
+ * This is a concept of closures 
  * Normally when we write test cases with unit testing we do assertions to test the functionalities.
  * The below function is a simple function to check for assertions and show the results accordingly.
  * In Normal node environment the thor new Error statement would highlight the thrown error in the terminal.
