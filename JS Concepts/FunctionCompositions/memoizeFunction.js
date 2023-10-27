@@ -74,9 +74,13 @@ fnName is one of "sum", "factorial" and "fib"
  */
 
 function memoize(fn) {
-    
+    const cache = {};
     return function(...args) {
-        
+        const key = args.join("_");
+        if (key in cache) {
+            return cache[key];
+        }
+        return cache[key] = fn(...args);
     }
 }
 
@@ -86,7 +90,8 @@ function memoize(fn) {
  *	 callCount += 1;
  *   return a + b;
  * })
- * memoizedFn(2, 3) // 5
- * memoizedFn(2, 3) // 5
- * console.log(callCount) // 1 
+ * memoizedFn(2, 5) // 7
+ * memoizedFn(2, 4) // 6
+ * memoizedFn(2, 5) // 7
+ * console.log(callCount) // 2
  */
