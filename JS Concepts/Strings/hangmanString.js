@@ -18,8 +18,8 @@ function hangman(hangmanString) {
 
 
 //  Test case                                           Expected
-    console.log(hangman('TestString'));                 // '_e_t_t_i_g'
-    console.log(hangman('Foobar'));                     // '_o_b_r'
-    console.log(hangman('Demo'));                       // '_e_o'
-    console.log(hangman('JS is fancy'));                // '_S_i_ _a_c_'
-    console.log(hangman('ThisIsAnFancyString'));        // '_h_s_s_n_a_c_S_r_n_'
+    console.log(hangman('TestString'));                 // _e_t_t_i_g
+    console.log(hangman('Foobar'));                     // _o_b_r
+    console.log(hangman('Demo'));                       // _e_o
+    console.log(hangman('JS is fancy'));                // _S_i__a_c_
+    console.log(hangman('ThisIsAnFancyString'));        // _h_s_s_n_a_c_S_r_n_
