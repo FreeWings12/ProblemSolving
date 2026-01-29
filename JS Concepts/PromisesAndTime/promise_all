@@ -1,0 +1,27 @@
+// Implement a custom promise.all method
+
+function promiseAll(promises) {
+    return new Promise((resolve, reject) => {
+        if (promises.length === 0) return resolve([]);
+        const results = [];
+        let completedCounter = 0;
+        promises.forEach((promise, index) => {
+            Promise.resolve((promise))
+                .then(data => {
+                    results[index] = data;
+                    completedCounter++;
+                    if (promises.length === completedCounter) return resolve(results);
+                })
+                .catch(error => reject(error));
+        })
+    })
+}
+
+const promises = [
+    new Promise((res) => res(2)),
+    new Promise((res, rej) => setTimeout(() => res(3), 10)),
+    // new Promise((res, rej) => setTimeout(() => rej('Error'), 1000)),
+    new Promise((res, rej) => setTimeout(() => res(4), 0)),
+];
+
+console.log("All: ", promiseAll(promises).then(vl => console.log("res ", vl)).catch(er => console.log("Errrr ", er)));
